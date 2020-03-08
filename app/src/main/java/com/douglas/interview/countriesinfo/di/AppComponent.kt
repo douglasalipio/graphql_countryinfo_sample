@@ -12,6 +12,7 @@ import javax.inject.Singleton
 		AppModule::class,
 		GraphModule::class,
 		RemoteModule::class,
+		MapperModule::class,
 		PresenterModule::class,
 		InteractorModule::class,
 		RepositoryModule::class]
