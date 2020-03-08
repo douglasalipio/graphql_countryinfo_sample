@@ -1,0 +1,13 @@
+query GetCountriesInfo{
+	countries(where: {name: {eq: "Brazil"}}) {
+		name
+		population
+		capital {
+			name
+		}
+		cities {
+			name
+			population
+		}
+	}
+}
