@@ -1,4 +1,4 @@
-package com.douglas.interview.countriesinfo.data
+package com.douglas.interview.countriesinfo.data.remote
 
 import com.apollographql.apollo.api.Response
 import com.douglas.interview.countriesinfo.GetCountriesInfoQuery
