@@ -16,11 +16,12 @@ class CountryInfoPresenter @Inject constructor(private val interactor: CountryIn
 	override fun loadData(countryName: String) {
 
 		interactor.requestCountryInfo(object : CountryInfoInteractor.GetCountryCallback {
-			override fun onCountryInfoLoaded(data: Response<GetCountriesInfoQuery.Data>) {
-				view?.showCountryInfo()
+			override fun onCountryInfoLoaded(countryInfo: CountryInfo?) {
+				countryInfo?.let { view?.showCountryInfo(countryInfo) }
 			}
 
 			override fun onDataNotAvailable(strError: String) {
+				view?.showDataError()
 			}
 
 		}, "Brazil")

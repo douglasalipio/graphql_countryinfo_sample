@@ -1,7 +1,5 @@
 package com.douglas.interview.countriesinfo.features
 
-import com.apollographql.apollo.api.Response
-import com.douglas.interview.countriesinfo.GetCountriesInfoQuery
 import com.douglas.interview.countriesinfo.data.AppRepository
 import com.douglas.interview.countriesinfo.data.mapper.CountryInfoDtoToCountryInfoMapper
 import io.reactivex.android.schedulers.AndroidSchedulers

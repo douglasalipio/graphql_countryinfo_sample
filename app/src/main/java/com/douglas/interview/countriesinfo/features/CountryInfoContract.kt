@@ -8,7 +8,8 @@ interface CountryInfoContract {
 
 	interface View : BaseView<Presenter> {
 
-		fun showCountryInfo()
+		fun showCountryInfo( countryInfo : CountryInfo)
+		fun showDataError()
 	}
 
 	interface Presenter : BasePresenter {
@@ -16,7 +17,11 @@ interface CountryInfoContract {
 	}
 
 	interface Interactor : BaseInteractor {
-		fun requestCountryInfo(getCountryInfoCallback: CountryInfoInteractor.GetCountryCallback, countryName: String)
+		fun requestCountryInfo(
+			getCountryInfoCallback: CountryInfoInteractor.GetCountryCallback,
+			countryName: String
+		)
+
 		fun disposable()
 	}
 }

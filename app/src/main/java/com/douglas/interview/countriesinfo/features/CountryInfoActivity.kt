@@ -7,7 +7,7 @@ import com.douglas.interview.countriesinfo.R
 import com.douglas.interview.countriesinfo.foundation.BaseActivity
 import javax.inject.Inject
 
-class CountryInfoActivity : BaseActivity() {
+class CountryInfoActivity : BaseActivity(), CountryInfoContract.View {
 
 	@Inject
 	lateinit var presenter: CountryInfoPresenter
@@ -18,5 +18,13 @@ class CountryInfoActivity : BaseActivity() {
 		super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_main)
 		presenter.loadData("Brazil")
+	}
+
+	override fun showCountryInfo(countryInfo: CountryInfo) {
+
+	}
+
+	override fun showDataError() {
+
 	}
 }

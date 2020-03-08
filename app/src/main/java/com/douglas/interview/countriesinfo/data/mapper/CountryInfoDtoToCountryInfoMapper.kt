@@ -8,8 +8,9 @@ import com.douglas.interview.countriesinfo.utils.Mapper
 class CountryInfoDtoToCountryInfoMapper : Mapper<GetCountriesInfoQuery.Data, CountryInfo> {
 
 	override fun map(from: GetCountriesInfoQuery.Data?): CountryInfo? {
-		if (from != null) {
-			CountryInfo(
+
+		if (from != null && from.countries.isNotEmpty()) {
+			return CountryInfo(
 				name = from.countries.last().name,
 				capital = from.countries.last().capital?.name.orEmpty(),
 				population = from.countries.last().population.toString(),
