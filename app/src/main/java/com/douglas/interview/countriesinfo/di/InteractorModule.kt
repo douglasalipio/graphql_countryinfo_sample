@@ -2,8 +2,8 @@ package com.douglas.interview.countriesinfo.di
 
 import com.douglas.interview.countriesinfo.data.AppRepository
 import com.douglas.interview.countriesinfo.data.mapper.CountryInfoDtoToCountryInfoMapper
-import com.douglas.interview.countriesinfo.features.CountryInfoContract
-import com.douglas.interview.countriesinfo.features.CountryInfoInteractor
+import com.douglas.interview.countriesinfo.feature.CountryInfoContract
+import com.douglas.interview.countriesinfo.feature.CountryInfoInteractor
 import dagger.Module
 import dagger.Provides
 import dagger.Reusable

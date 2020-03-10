@@ -1,7 +1,6 @@
 package com.douglas.interview.countriesinfo.di
 
-import com.douglas.interview.countriesinfo.features.CountryInfoPresenter
-import com.douglas.interview.countriesinfo.features.view.CountryInfoActivity
+import com.douglas.interview.countriesinfo.feature.view.CountryInfoActivity
 import dagger.Component
 import javax.inject.Singleton
 

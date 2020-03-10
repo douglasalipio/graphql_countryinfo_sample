@@ -1,4 +1,4 @@
-package com.douglas.interview.countriesinfo.features
+package com.douglas.interview.countriesinfo.feature
 
 import com.douglas.interview.countriesinfo.data.AppRepository
 import com.douglas.interview.countriesinfo.data.mapper.CountryInfoDtoToCountryInfoMapper

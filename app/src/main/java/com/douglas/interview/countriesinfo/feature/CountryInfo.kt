@@ -1,4 +1,4 @@
-package com.douglas.interview.countriesinfo.features
+package com.douglas.interview.countriesinfo.feature
 
 data class CountryInfo	(
 	val name: String,

@@ -1,4 +1,4 @@
-package com.douglas.interview.countriesinfo.features
+package com.douglas.interview.countriesinfo.feature
 
 import javax.inject.Inject
 

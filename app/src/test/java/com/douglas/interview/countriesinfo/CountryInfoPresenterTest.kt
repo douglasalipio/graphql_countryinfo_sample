@@ -1,6 +1,6 @@
 package com.douglas.interview.countriesinfo
 
-import com.douglas.interview.countriesinfo.features.*
+import com.douglas.interview.countriesinfo.feature.*
 import com.nhaarman.mockitokotlin2.capture
 import com.nhaarman.mockitokotlin2.verify
 import org.junit.Before

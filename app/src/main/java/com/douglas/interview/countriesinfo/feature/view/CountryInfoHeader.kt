@@ -1,7 +1,7 @@
-package com.douglas.interview.countriesinfo.features.view
+package com.douglas.interview.countriesinfo.feature.view
 
 import com.douglas.interview.countriesinfo.R
-import com.douglas.interview.countriesinfo.features.CountryInfo
+import com.douglas.interview.countriesinfo.feature.CountryInfo
 import com.xwray.groupie.kotlinandroidextensions.GroupieViewHolder
 import com.xwray.groupie.kotlinandroidextensions.Item
 import kotlinx.android.synthetic.main.country_header_view.view.*

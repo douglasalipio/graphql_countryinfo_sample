@@ -1,8 +1,8 @@
 package com.douglas.interview.countriesinfo.data.mapper
 
 import com.douglas.interview.countriesinfo.GetCountriesInfoQuery
-import com.douglas.interview.countriesinfo.features.City
-import com.douglas.interview.countriesinfo.features.CountryInfo
+import com.douglas.interview.countriesinfo.feature.City
+import com.douglas.interview.countriesinfo.feature.CountryInfo
 import com.douglas.interview.countriesinfo.utils.Mapper
 
 class CountryInfoDtoToCountryInfoMapper : Mapper<GetCountriesInfoQuery.Data, CountryInfo> {

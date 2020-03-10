@@ -1,14 +1,14 @@
-package com.douglas.interview.countriesinfo.features.view
+package com.douglas.interview.countriesinfo.feature.view
 
 import android.os.Bundle
 import android.widget.Toast
 import android.widget.Toast.makeText
 import com.douglas.interview.countriesinfo.App
 import com.douglas.interview.countriesinfo.R
-import com.douglas.interview.countriesinfo.features.CountryHelper.DEFAULT_COUNTRY_NAME
-import com.douglas.interview.countriesinfo.features.CountryInfo
-import com.douglas.interview.countriesinfo.features.CountryInfoContract
-import com.douglas.interview.countriesinfo.features.CountryInfoPresenter
+import com.douglas.interview.countriesinfo.feature.CountryHelper.DEFAULT_COUNTRY_NAME
+import com.douglas.interview.countriesinfo.feature.CountryInfo
+import com.douglas.interview.countriesinfo.feature.CountryInfoContract
+import com.douglas.interview.countriesinfo.feature.CountryInfoPresenter
 import com.douglas.interview.countriesinfo.foundation.BaseActivity
 import com.douglas.interview.countriesinfo.utils.hideKeyboardFrom
 import com.douglas.interview.countriesinfo.utils.initArrayAdapter

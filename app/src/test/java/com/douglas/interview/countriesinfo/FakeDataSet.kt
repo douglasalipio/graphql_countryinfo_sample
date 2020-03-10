@@ -1,7 +1,7 @@
 package com.douglas.interview.countriesinfo
 
-import com.douglas.interview.countriesinfo.features.City
-import com.douglas.interview.countriesinfo.features.CountryInfo
+import com.douglas.interview.countriesinfo.feature.City
+import com.douglas.interview.countriesinfo.feature.CountryInfo
 
 
 fun mockCountryInfo() =

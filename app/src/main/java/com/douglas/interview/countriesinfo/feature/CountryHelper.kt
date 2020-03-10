@@ -1,7 +1,7 @@
-package com.douglas.interview.countriesinfo.features
+package com.douglas.interview.countriesinfo.feature
 
 import com.douglas.interview.countriesinfo.App
-import com.douglas.interview.countriesinfo.data.country.CountryCode
+import com.douglas.interview.countriesinfo.data.feature.country.CountryCode
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.io.BufferedReader

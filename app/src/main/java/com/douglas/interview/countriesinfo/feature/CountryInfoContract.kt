@@ -1,4 +1,4 @@
-package com.douglas.interview.countriesinfo.features
+package com.douglas.interview.countriesinfo.feature
 
 import com.douglas.interview.countriesinfo.foundation.BaseInteractor
 import com.douglas.interview.countriesinfo.foundation.BasePresenter

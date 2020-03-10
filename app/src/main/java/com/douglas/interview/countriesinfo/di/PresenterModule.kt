@@ -1,7 +1,7 @@
 package com.douglas.interview.countriesinfo.di
 
-import com.douglas.interview.countriesinfo.features.CountryInfoContract
-import com.douglas.interview.countriesinfo.features.CountryInfoPresenter
+import com.douglas.interview.countriesinfo.feature.CountryInfoContract
+import com.douglas.interview.countriesinfo.feature.CountryInfoPresenter
 import dagger.Module
 import dagger.Provides
 import dagger.Reusable
