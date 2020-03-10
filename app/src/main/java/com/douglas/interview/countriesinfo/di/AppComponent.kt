@@ -1,8 +1,7 @@
 package com.douglas.interview.countriesinfo.di
 
-import com.douglas.interview.countriesinfo.App
-import com.douglas.interview.countriesinfo.features.CountryInfoActivity
-import dagger.BindsInstance
+import com.douglas.interview.countriesinfo.features.CountryInfoPresenter
+import com.douglas.interview.countriesinfo.features.view.CountryInfoActivity
 import dagger.Component
 import javax.inject.Singleton
 

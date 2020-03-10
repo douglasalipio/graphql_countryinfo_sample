@@ -26,7 +26,7 @@ android {
 		debug {
 			minifyEnabled false
 			proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-			buildConfigField "String", "BASE_URL", "\"https://api.everbase.co/graphql\""
+			buildConfigField "String", "BASE_URL", "\"https://countries.trevorblades.com/\""
 		}
 	}
 
@@ -36,7 +36,7 @@ android {
 	}
 
 	apollo {
-		generateKotlinModels.set(true)
+		generateKotlinModels.set(false)
 	}
 }
 
@@ -75,4 +75,10 @@ dependencies {
 	implementation "com.google.dagger:dagger:2.26"
 	kapt "com.google.dagger:dagger-compiler:2.26"
 
+	//Sectioned recycler list lib
+	implementation "com.xwray:groupie:2.7.0"
+	implementation "com.xwray:groupie-kotlin-android-extensions:2.7.0"
+
+	//Serialize/Deserialize objects
+	implementation 'com.google.code.gson:gson:2.8.6'
 }

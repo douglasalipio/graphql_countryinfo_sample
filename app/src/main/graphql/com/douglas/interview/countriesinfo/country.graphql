@@ -1,13 +1,18 @@
-query GetCountriesInfo{
-	countries(where: {name: {eq: "Brazil"}}) {
+query GetCountriesInfo($nameSelected : String){
+	country(code: $nameSelected) {
 		name
-		population
-		capital {
+		native
+		emoji
+		states{
 			name
 		}
-		cities {
+		currency
+		languages {
+			code
 			name
-			population
+		}
+		continent{
+			name
 		}
 	}
 }

@@ -1,12 +1,11 @@
 package com.douglas.interview.countriesinfo.features
 
-import com.apollographql.apollo.api.Response
-import com.douglas.interview.countriesinfo.GetCountriesInfoQuery
 import javax.inject.Inject
 
 class CountryInfoPresenter @Inject constructor(private val interactor: CountryInfoContract.Interactor) :
 	CountryInfoContract.Presenter {
-
+	@Inject
+	lateinit var countryHelper: CountryHelper
 	private var view: CountryInfoContract.View? = null
 
 	override fun <T> takeView(view: T) {
@@ -16,15 +15,15 @@ class CountryInfoPresenter @Inject constructor(private val interactor: CountryIn
 	override fun loadData(countryName: String) {
 
 		interactor.requestCountryInfo(object : CountryInfoInteractor.GetCountryCallback {
-			override fun onCountryInfoLoaded(countryInfo: CountryInfo?) {
-				countryInfo?.let { view?.showCountryInfo(countryInfo) }
+			override fun onCountryInfoLoaded(data: CountryInfo?) {
+				data?.let { view?.showCountryInfo(data) }
 			}
 
 			override fun onDataNotAvailable(strError: String) {
 				view?.showDataError()
 			}
 
-		}, "Brazil")
+		}, CountryHelper.countryCode(countryName))
 	}
 
 	override fun dropView() {

@@ -6,5 +6,5 @@ import io.reactivex.Observable
 
 interface RemoteRepository {
 
-	fun getCountryInfo(countryName: String = ""): Observable<Response<GetCountriesInfoQuery.Data>>
+	fun getCountryInfo(countryName: String): Observable<Response<GetCountriesInfoQuery.Data>>
 }

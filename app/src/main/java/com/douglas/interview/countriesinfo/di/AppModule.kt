@@ -1,6 +1,7 @@
 package com.douglas.interview.countriesinfo.di
 
 import android.app.Application
+import android.content.Context
 import dagger.Module
 import dagger.Provides
 import dagger.Reusable
@@ -10,5 +11,9 @@ class AppModule {
 
 	@Provides
 	@Reusable
-	fun provideContext(application: Application): Application = application
+	fun provideApplicationContext(application: Application): Application = application
+
+	@Provides
+	@Reusable
+	fun provideContext(context: Context): Context = context
 }

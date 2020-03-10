@@ -8,7 +8,7 @@ interface CountryInfoContract {
 
 	interface View : BaseView<Presenter> {
 
-		fun showCountryInfo( countryInfo : CountryInfo)
+		fun showCountryInfo(countryInfo: CountryInfo)
 		fun showDataError()
 	}
 

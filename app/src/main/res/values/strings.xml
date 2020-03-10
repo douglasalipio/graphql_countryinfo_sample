@@ -1,3 +1,5 @@
 <resources>
 	<string name="app_name">CountriesInfo</string>
+	<string name="country_name_label">Country name</string>
+	<string name="generic_error_message">Generic error</string>
 </resources>

@@ -4,7 +4,7 @@
   "extensions": {
     "endpoints": {
       "Default GraphQL Endpoint": {
-        "url": "https://api.everbase.co/graphql",
+        "url": "https://countries.trevorblades.com/",
         "headers": {
           "user-agent": "json"
         },
