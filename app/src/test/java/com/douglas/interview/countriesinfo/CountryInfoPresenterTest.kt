@@ -47,7 +47,7 @@ class CountryInfoPresenterTest {
 		//When
 		verify(interactor).requestCountryInfo(capture(getCountryInfoCallbackCaptor), anyString())
 		getCountryInfoCallbackCaptor.value.onDataNotAvailable("data not available.")
-		//Than
+		//Then
 		verify(view).showDataError()
 	}
 

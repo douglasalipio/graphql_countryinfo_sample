@@ -9,7 +9,7 @@ fun mockCountryInfo() =
 		name = "Ireland",
 		continent = "Europe",
 		native = "Dublin",
-		language = listOf<String>(),
+		language = listOf(),
 		cities = listOf(City("Dublin"))
 	)
 
