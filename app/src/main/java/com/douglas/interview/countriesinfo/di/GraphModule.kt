@@ -2,8 +2,13 @@ package com.douglas.interview.countriesinfo.di
 
 import com.apollographql.apollo.ApolloClient
 import com.douglas.interview.countriesinfo.BuildConfig
+import com.douglas.interview.countriesinfo.data.AppRepository
+import com.douglas.interview.countriesinfo.data.mapper.CountryInfoDtoToCountryInfoMapper
+import com.douglas.interview.countriesinfo.feature.CountryInfoContract
+import com.douglas.interview.countriesinfo.feature.CountryInfoInteractor
 import dagger.Module
 import dagger.Provides
+import dagger.Reusable
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import java.util.concurrent.TimeUnit

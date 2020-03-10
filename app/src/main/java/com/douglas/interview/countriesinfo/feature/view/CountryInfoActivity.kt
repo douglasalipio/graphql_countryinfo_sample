@@ -5,7 +5,7 @@ import android.widget.Toast
 import android.widget.Toast.makeText
 import com.douglas.interview.countriesinfo.App
 import com.douglas.interview.countriesinfo.R
-import com.douglas.interview.countriesinfo.feature.CountryHelper.DEFAULT_COUNTRY_NAME
+import com.douglas.interview.countriesinfo.data.local.LocalRepositoryImp.Companion.DEFAULT_COUNTRY_NAME
 import com.douglas.interview.countriesinfo.feature.CountryInfo
 import com.douglas.interview.countriesinfo.feature.CountryInfoContract
 import com.douglas.interview.countriesinfo.feature.CountryInfoPresenter
@@ -37,7 +37,8 @@ class CountryInfoActivity : BaseActivity(),
 	}
 
 	private fun initComponents() {
-		val dropDowAdapter = initArrayAdapter(this, resources.getStringArray(R.array.countries_array))
+		val dropDowAdapter =
+			initArrayAdapter(this, resources.getStringArray(R.array.countries_array))
 		dropDownCountry.setAdapter(dropDowAdapter)
 		countryList?.initGridLayout(this, countryAdapter)
 		dropDownCountry?.setOnItemClickListener { _, _, _, _ -> onClickCountrySearch() }

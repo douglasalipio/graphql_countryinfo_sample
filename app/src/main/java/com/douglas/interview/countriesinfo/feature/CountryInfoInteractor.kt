@@ -19,7 +19,8 @@ class CountryInfoInteractor @Inject constructor(
 		countryName: String
 	) {
 		disposable.add(appRepository
-			.getCountryInfo(countryName)
+			.getCountryCode(countryName)
+			.flatMap { code -> appRepository.getCountryInfo(code) }
 			.subscribeOn(Schedulers.io())
 			.observeOn(AndroidSchedulers.mainThread())
 			.doOnError { getCountryInfoCallback.onDataNotAvailable(it.message.toString()) }
@@ -28,7 +29,6 @@ class CountryInfoInteractor @Inject constructor(
 				getCountryInfoCallback.onCountryInfoLoaded(data)
 			})
 	}
-
 
 	interface GetCountryCallback {
 

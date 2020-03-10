@@ -9,13 +9,13 @@ import javax.inject.Singleton
 	modules = [
 		AppModule::class,
 		GraphModule::class,
-		RemoteModule::class,
+		RemoteRepositoryModule::class,
 		MapperModule::class,
 		PresenterModule::class,
 		InteractorModule::class,
-		RepositoryModule::class]
+		LocalRepositoryModule::class,
+		AppRepositoryModule::class]
 )
 interface AppComponent {
 	fun inject(activity: CountryInfoActivity)
-	fun build(): AppComponent
 }

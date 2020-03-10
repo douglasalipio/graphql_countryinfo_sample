@@ -1,11 +1,12 @@
 package com.douglas.interview.countriesinfo.feature
 
+import com.douglas.interview.countriesinfo.data.local.LocalRepository
 import javax.inject.Inject
 
 class CountryInfoPresenter @Inject constructor(private val interactor: CountryInfoContract.Interactor) :
 	CountryInfoContract.Presenter {
 	@Inject
-	lateinit var countryHelper: CountryHelper
+	lateinit var localRepository: LocalRepository
 	private var view: CountryInfoContract.View? = null
 
 	override fun <T> takeView(view: T) {
@@ -13,7 +14,6 @@ class CountryInfoPresenter @Inject constructor(private val interactor: CountryIn
 	}
 
 	override fun loadData(countryName: String) {
-
 		interactor.requestCountryInfo(object : CountryInfoInteractor.GetCountryCallback {
 			override fun onCountryInfoLoaded(data: CountryInfo?) {
 				data?.let { view?.showCountryInfo(data) }
@@ -22,8 +22,7 @@ class CountryInfoPresenter @Inject constructor(private val interactor: CountryIn
 			override fun onDataNotAvailable(strError: String) {
 				view?.showDataError()
 			}
-
-		}, CountryHelper.countryCode(countryName))
+		}, countryName)
 	}
 
 	override fun dropView() {
