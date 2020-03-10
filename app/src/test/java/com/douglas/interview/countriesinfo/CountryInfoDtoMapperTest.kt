@@ -17,8 +17,8 @@ class CountryInfoDtoMapperTest {
 		val mappingResult = mapper.map(countryDto)
 		// then
 		assertEquals(expectedCountryInfo.name, mappingResult?.name)
-		assertEquals(expectedCountryInfo.capital, mappingResult?.capital)
-		assertEquals(expectedCountryInfo.population, mappingResult?.population)
+		assertEquals(expectedCountryInfo.native, mappingResult?.native)
+		assertEquals(expectedCountryInfo.continent, mappingResult?.continent)
 	}
 
 }

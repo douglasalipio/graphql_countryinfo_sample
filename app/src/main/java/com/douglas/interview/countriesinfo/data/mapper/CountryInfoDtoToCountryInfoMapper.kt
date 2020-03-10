@@ -11,16 +11,21 @@ class CountryInfoDtoToCountryInfoMapper : Mapper<GetCountriesInfoQuery.Data, Cou
 		if (from != null) {
 			return CountryInfo(
 				name = from.country()?.name().orEmpty(),
-				capital = from.country()?.native_().orEmpty(),
-				population = "",
+				native = from.country()?.native_().orEmpty(),
+				continent = from.country()?.continent()?.name().orEmpty(),
+				language = mapLanguages(from.country()?.languages()).orEmpty(),
 				cities = mapCities(from.country()?.states().orEmpty())
 			)
 		}
 		return null
 	}
 
+	private fun mapLanguages(language: List<GetCountriesInfoQuery.Language>?) =
+		language?.map { it.name().orEmpty() }
+
+
 	private fun mapCities(cities: List<GetCountriesInfoQuery.State>) =
-		cities.map { City(it.name().orEmpty(), "") }
+		cities.map { City(it.name().orEmpty()) }
 
 	override fun mapToList(from: GetCountriesInfoQuery.Data): List<CountryInfo> {
 		TODO("Not yet implemented")

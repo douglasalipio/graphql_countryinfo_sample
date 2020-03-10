@@ -1,5 +1,6 @@
 <resources>
 	<string-array name="countries_array">
+		<item>Australia</item>
 		<item>Afghanistan</item>
 		<item>Albania</item>
 		<item>Algeria</item>
@@ -12,7 +13,6 @@
 		<item>Argentina</item>
 		<item>Armenia</item>
 		<item>Aruba</item>
-		<item>Australia</item>
 		<item>Austria</item>
 		<item>Azerbaijan</item>
 		<item>Bahrain</item>

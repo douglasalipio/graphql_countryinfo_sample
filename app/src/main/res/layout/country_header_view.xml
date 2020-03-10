@@ -3,7 +3,7 @@
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
-	android:layout_height="60dp"
+	android:layout_height="@dimen/grid_80"
 	android:background="@color/colorPrimary"
 	android:padding="@dimen/grid_10">
 
@@ -15,31 +15,30 @@
 		android:layout_marginStart="@dimen/grid_8"
 		android:layout_marginLeft="@dimen/grid_8"
 		android:textColor="@android:color/white"
-		android:textSize="18sp"
+		android:textSize="@dimen/large_text"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent"
-		tools:text="Ireland" />
+		tools:text="Ireland/ Ireland" />
 
 	<TextView
-		android:id="@+id/capital"
+		android:id="@+id/languages"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_gravity="center"
 		android:textColor="@android:color/white"
 		app:layout_constraintStart_toStartOf="@+id/countryName"
 		app:layout_constraintTop_toBottomOf="@+id/countryName"
-		tools:text="Dublin" />
+		tools:text="Irish, English" />
 
 	<TextView
-		android:id="@+id/population"
+		android:id="@+id/continent"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_gravity="center"
 		android:textColor="@android:color/white"
-		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
-		tools:text="100.000" />
-
+		app:layout_constraintTop_toTopOf="parent"
+		tools:text="Europe" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

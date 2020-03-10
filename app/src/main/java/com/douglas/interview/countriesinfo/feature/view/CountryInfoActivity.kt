@@ -5,7 +5,6 @@ import android.widget.Toast
 import android.widget.Toast.makeText
 import com.douglas.interview.countriesinfo.App
 import com.douglas.interview.countriesinfo.R
-import com.douglas.interview.countriesinfo.data.local.LocalRepositoryImp.Companion.DEFAULT_COUNTRY_NAME
 import com.douglas.interview.countriesinfo.feature.CountryInfo
 import com.douglas.interview.countriesinfo.feature.CountryInfoContract
 import com.douglas.interview.countriesinfo.feature.CountryInfoPresenter
@@ -13,6 +12,7 @@ import com.douglas.interview.countriesinfo.foundation.BaseActivity
 import com.douglas.interview.countriesinfo.utils.hideKeyboardFrom
 import com.douglas.interview.countriesinfo.utils.initArrayAdapter
 import com.douglas.interview.countriesinfo.utils.initGridLayout
+import com.douglas.interview.countriesinfo.utils.isConnectedToNetwork
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Section
 import com.xwray.groupie.kotlinandroidextensions.GroupieViewHolder
@@ -31,7 +31,6 @@ class CountryInfoActivity : BaseActivity(),
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_main)
-		presenter.loadData(DEFAULT_COUNTRY_NAME)
 		presenter.takeView(this)
 		initComponents()
 	}
@@ -39,15 +38,19 @@ class CountryInfoActivity : BaseActivity(),
 	private fun initComponents() {
 		val dropDowAdapter =
 			initArrayAdapter(this, resources.getStringArray(R.array.countries_array))
+		countryList.initGridLayout(this, countryAdapter)
+		dropDownCountry.threshold = 1
 		dropDownCountry.setAdapter(dropDowAdapter)
-		countryList?.initGridLayout(this, countryAdapter)
-		dropDownCountry?.setOnItemClickListener { _, _, _, _ -> onClickCountrySearch() }
+		dropDownCountry.setOnItemClickListener { _, _, _, _ -> onClickCountrySearch() }
 	}
 
 	private fun onClickCountrySearch() {
 		countryAdapter.clear()
 		hideKeyboardFrom(this, dropDownCountry)
-		presenter.loadData(dropDownCountry.text.toString())
+		if (applicationContext.isConnectedToNetwork())
+			presenter.loadData(dropDownCountry.text.toString())
+		else
+			showDataError()
 	}
 
 	override fun showCountryInfo(countryInfo: CountryInfo) {

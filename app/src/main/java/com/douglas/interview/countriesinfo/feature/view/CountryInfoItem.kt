@@ -10,7 +10,6 @@ class CountryInfoItem(private val city: City) : Item() {
 
 	override fun bind(viewHolder: GroupieViewHolder, position: Int) {
 		viewHolder.itemView.cityName.text = city.name
-		viewHolder.itemView.cityPopulation.text = city.population
 	}
 
 	override fun getLayout() = R.layout.country_item_view
