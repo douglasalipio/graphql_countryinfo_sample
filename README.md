@@ -1,6 +1,8 @@
 #Countries Info App
 ==================================
-<img src ="https://github.com/douglasalipio/graphql_countryinfo_sample/blob/master/app/main_view.gif" width="360" />&nbsp;&nbsp;
+<p align="center">
+<img src ="https://github.com/douglasalipio/graphql_countryinfo_sample/blob/master/app/main_view.gif" width="360" />
+
 
 It's a simple application to show the basic understanding of GraphQL in Android. The App is able to show information about a specific country selected by the user.
 
@@ -47,5 +49,5 @@ The MPV design pattern has been implemented to make views reusable and to isolat
 
 ### Instalation
 
-Android Studio 3.6.1
-Gradle 5.6.4
+- Android Studio 3.6.1
+- Gradle 5.6.4
