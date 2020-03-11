@@ -17,15 +17,15 @@ query GetCountriesInfo($nameSelected : String){
 		native
 		emoji
 		states{
-			name
+		   name
 		}
 		currency
 		languages {
-			code
-			name
+		    code
+		    name
 		}
 		continent{
-			name
+		    name
 		}
 	}
 }
