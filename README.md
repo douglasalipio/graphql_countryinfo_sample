@@ -6,10 +6,6 @@
 It's a simple application to show the basic understanding of GraphQL in Android. The App is able to show information about a specific country selected by the user. For most of the countries, the information about states is not available, to have a better experience, pick up countries such as China, Germane, Argentina, Brazil Belgian, Japan.
 
 ### GraphQL query
-
-Fetch information related to the country that the user has selected.
-Here's the query responsible to fetch all the information about the country.
-
 ```graphql
 query GetCountriesInfo($nameSelected : String){
 	country(code: $nameSelected) {
@@ -30,6 +26,10 @@ query GetCountriesInfo($nameSelected : String){
 	}
 }
 ```
+
+Fetch information related to the country that the user has selected.
+Here's the query responsible to fetch all the information about the country.
+
 ### Architecture
 
 <img src ="https://github.com/douglasalipio/graphql_countryinfo_sample/blob/master/architecture_diagram.png"/>&nbsp;&nbsp;
