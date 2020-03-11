@@ -3,7 +3,6 @@ package com.douglas.interview.countriesinfo
 import com.douglas.interview.countriesinfo.feature.City
 import com.douglas.interview.countriesinfo.feature.CountryInfo
 
-
 fun mockCountryInfo() =
 	CountryInfo(
 		name = "Ireland",
