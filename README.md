@@ -28,7 +28,7 @@ query GetCountriesInfo($nameSelected : String){
 ```
 
 Fetch information related to the country that the user has selected.
-Here's the query responsible to fetch all the information about the country.
+Here's the query responsible to fetch all the information about the country. More infomation check out the service link: https://countries.trevorblades.com/
 
 ### Architecture
 
